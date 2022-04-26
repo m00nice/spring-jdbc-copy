@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class EmployeeController {
     private final IRepository<Employee> employeeIRepository = new EmployeeRepository();
-    @GetMapping("/")
+    @GetMapping("/employee")
     public String showEmployees(Model model){
         employeeIRepository.getAllEntities();
         return "employee";
